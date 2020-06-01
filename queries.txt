@@ -1,0 +1,30 @@
+Queries 1
+prove_interface( a => a ).
+prove_interface( hello ).
+prove_interface(to_be | ∼ to_be).
+prove_interface(to_be & ∼ to_be).
+prove_interface(p & (p => q) => q).
+%%%%%%%%%%%%%%
+Queries 2
+prove_interface( a => a ).
+prove_interface( hello ).
+prove_interface(to_be | ∼ to_be).
+prove_interface(to_be & ∼ to_be).
+prove_interface(p & (p => q) => q).
+%%%%%%%%%%%%%%
+Queries 3
+prove_interface( p => p ).
+prove_interface( p(f(a)) => p(f(a)) ).
+prove_interface( ![X]:p(X) => p(a) & p(b) & p(f(a,g(b,c))) ).
+prove_interface( ![X]: p(X) => ?[Y]: p(Y) ).
+%%%%%%%%%%%%%
+Queries 4
+prove_interface( p(a) => p(a) ).
+prove_interface( ![X]:p(X) => p(a) & p(b) ).
+prove_interface( ![X]: p(X) => ?[Y]: p(Y) ).
+%%%%%%%%%%%%
+Queries 5
+prove_interface( p(a) => p(a) ).
+prove_interface( ![X]:p(X) => p(a) & p(b) ).
+prove_interface( ![X]: p(X) => ?[Y]: p(Y) ).
+prove( ?[X]: p(X) => ![Y]: p(Y) ).
